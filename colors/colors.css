@@ -1,0 +1,56 @@
+@property --noicssBrightness {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 65%;
+}
+@property --noicssSaturation {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 1;
+}
+@property --noicssHue {
+  syntax: "<hue>";
+  inherits: false;
+  initial-value: 0;
+}
+
+:root {
+  /* FIXING VALUES */
+  --chroma: calc(var(--noicssSaturation) / 3.33333);
+  --chromaSpread: calc(var(--noicssSaturationSpread) / 3.33333);
+  --hueStartingRed: calc(var(--noicssHue) + 30);
+
+  /* CALCULATING ELEMENTS */
+  --brightness-1: calc(var(--noicssBrightness) + calc(var(--noicssBrightnessSpread) * 2));
+  --brightness-2: calc(var(--noicssBrightness) + var(--noicssBrightnessSpread));
+  --brightness-3: var(--noicssBrightness);
+  --brightness-4: calc(var(--noicssBrightness) - var(--noicssBrightnessSpread));
+  --brightness-5: calc(var(--noicssBrightness) - calc(var(--noicssBrightnessSpread) * 2));
+
+  --chroma-1: calc(var(--chroma) - calc(var(--chromaSpread) * 2));
+  --chroma-2: calc(var(--chroma) - var(--chromaSpread));
+  --chroma-3: var(--chroma);
+  --chroma-4: calc(var(--chroma) - var(--chromaSpread));
+  --chroma-5: calc(var(--chroma) - calc(var(--chromaSpread) * 2));
+
+  --hueComplementary: calc(var(--hueStartingRed) - 180);
+
+  /* COLORS TO USE */
+  --accentColor-1: oklch(var(--brightness-1) var(--chroma-1) var(--hueStartingRed));
+  --accentColor-2: oklch(var(--brightness-2) var(--chroma-2) var(--hueStartingRed));
+  --accentColor-3: oklch(var(--brightness-3) var(--chroma-3) var(--hueStartingRed));
+  --accentColor-4: oklch(var(--brightness-4) var(--chroma-4) var(--hueStartingRed));
+  --accentColor-5: oklch(var(--brightness-5) var(--chroma-5) var(--hueStartingRed));
+
+  --bgColor-1: oklch(var(--brightness-1) var(--chroma-1) var(--hueComplementary));
+  --bgColor-2: oklch(var(--brightness-2) var(--chroma-2) var(--hueComplementary));
+  --bgColor-3: oklch(var(--brightness-3) var(--chroma-3) var(--hueComplementary));
+  --bgColor-4: oklch(var(--brightness-4) var(--chroma-4) var(--hueComplementary));
+  --bgColor-5: oklch(var(--brightness-5) var(--chroma-5) var(--hueComplementary));
+
+  --textColor-1: oklch(95% 0.075 var(--hueStartingRed));
+  --textColor-2: oklch(85% 0.075 var(--hueStartingRed));
+  --textColor-3: oklch(67% 0.3 var(--hueStartingRed));
+  --textColor-4: oklch(25% 0.075 var(--hueStartingRed));
+  --textColor-5: oklch(15% 0.075 var(--hueStartingRed));
+}

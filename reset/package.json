@@ -1,0 +1,19 @@
+{
+  "name": "noicss.reset",
+  "description": "reset / normalize by noicss. In modern vanilla CSS.",
+  "version": "1.0.0",
+  "author": "dalailahner",
+  "license": "GLWTS",
+  "repository": "github:dalailahner/noicss",
+  "main": "reset.css",
+  "scripts": {
+    "test": "echo \"it's just CSS, you'll be fine\" && exit 0"
+  },
+  "keywords": [
+    "noicss",
+    "reset",
+    "normalize",
+    "CSS",
+    "UI"
+  ]
+}

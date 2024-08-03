@@ -1,0 +1,20 @@
+{
+  "name": "noicss",
+  "description": "A modular CSS collection to set you up with all kinds of things you might need. In modern vanilla CSS.",
+  "version": "1.0.0",
+  "author": "dalailahner",
+  "license": "GLWTS",
+  "repository": "github:dalailahner/noicss",
+  "exports": {
+    "./reset": "./reset/reset.css",
+    "./colors": "./colors/colors.css"
+  },
+  "scripts": {
+    "test": "echo \"it's just CSS, you'll be fine\" && exit 0"
+  },
+  "keywords": [
+    "noicss",
+    "CSS",
+    "UI"
+  ]
+}

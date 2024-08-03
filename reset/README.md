@@ -11,4 +11,19 @@
 npm install noicss.reset
 ```
 
+## Usage:
+
+import it into your CSS file:
+
+```CSS
+@layer reset, main;
+
+@import url("noicss.reset") layer(reset);
+
+/* YOUR OWN CSS: */
+@layer main {
+
+}
+```
+
 ---

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./colors.css" />
+    <style>
+      :root {
+        /* adjust values to your liking: */
+        --noicssHue: 0;
+        --noicssSaturation: 1;
+        --noicssBrightness: 60%;
+
+        --noicssBrightnessSpread: 20%;
+        --noicssSaturationSpread: 0.2;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+      }
+      .previewCont {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: stretch;
+      }
+      .colorsCont {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: stretch;
+      }
+      .accentColor,
+      .textColor,
+      .bgColor {
+        min-width: max-content;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .text {
+        padding: 0.125em 0.333em;
+        color: inherit;
+        font-family: Mollen, Inter, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .accentColor {
+        color: #fff;
+        &:nth-of-type(1) {
+          background-color: var(--accentColor-1);
+        }
+        &:nth-of-type(2) {
+          background-color: var(--accentColor-2);
+        }
+        &:nth-of-type(3) {
+          background-color: var(--accentColor-3);
+        }
+        &:nth-of-type(4) {
+          background-color: var(--accentColor-4);
+        }
+        &:nth-of-type(5) {
+          background-color: var(--accentColor-5);
+        }
+        & .text {
+          background-color: #000;
+        }
+      }
+      .colorsCont:has(.textColor) {
+        background: linear-gradient(to bottom, #000 0%, #fff 100%);
+      }
+      .textColor {
+        &:nth-of-type(1) {
+          color: var(--textColor-1);
+        }
+        &:nth-of-type(2) {
+          color: var(--textColor-2);
+        }
+        &:nth-of-type(3) {
+          color: var(--textColor-3);
+        }
+        &:nth-of-type(4) {
+          color: var(--textColor-4);
+        }
+        &:nth-of-type(5) {
+          color: var(--textColor-5);
+        }
+      }
+      .bgColor {
+        color: #fff;
+        &:nth-of-type(1) {
+          background-color: var(--bgColor-1);
+        }
+        &:nth-of-type(2) {
+          background-color: var(--bgColor-2);
+        }
+        &:nth-of-type(3) {
+          background-color: var(--bgColor-3);
+        }
+        &:nth-of-type(4) {
+          background-color: var(--bgColor-4);
+        }
+        &:nth-of-type(5) {
+          background-color: var(--bgColor-5);
+        }
+        & .text {
+          background-color: #000;
+        }
+      }
+    </style>
+    <title>noicss.color Preview</title>
+  </head>
+  <body>
+    <div class="previewCont">
+      <div class="colorsCont">
+        <div class="accentColor">
+          <p class="text">--accentColor-1</p>
+        </div>
+        <div class="accentColor">
+          <p class="text">--accentColor-2</p>
+        </div>
+        <div class="accentColor">
+          <p class="text">--accentColor-3</p>
+        </div>
+        <div class="accentColor">
+          <p class="text">--accentColor-4</p>
+        </div>
+        <div class="accentColor">
+          <p class="text">--accentColor-5</p>
+        </div>
+      </div>
+      <div class="colorsCont">
+        <div class="textColor">
+          <p class="text">--textColor-1</p>
+        </div>
+        <div class="textColor">
+          <p class="text">--textColor-2</p>
+        </div>
+        <div class="textColor">
+          <p class="text">--textColor-3</p>
+        </div>
+        <div class="textColor">
+          <p class="text">--textColor-4</p>
+        </div>
+        <div class="textColor">
+          <p class="text">--textColor-5</p>
+        </div>
+      </div>
+      <div class="colorsCont">
+        <div class="bgColor">
+          <p class="text">--bgColor-1</p>
+        </div>
+        <div class="bgColor">
+          <p class="text">--bgColor-2</p>
+        </div>
+        <div class="bgColor">
+          <p class="text">--bgColor-3</p>
+        </div>
+        <div class="bgColor">
+          <p class="text">--bgColor-4</p>
+        </div>
+        <div class="bgColor">
+          <p class="text">--bgColor-5</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -13,6 +13,16 @@
   inherits: false;
   initial-value: 0;
 }
+@property --noicssBrightnessSpread {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --noicssSaturationSpread {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
 
 :root {
   /* FIXING VALUES */

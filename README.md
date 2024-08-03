@@ -30,7 +30,21 @@ npm install noicss.reset
 
 ## Usage:
 
-import the things you need it into your CSS file:
+import the things you need into your CSS file:
+
+```CSS
+@layer reset, colors, main;
+
+@import url("noicss/reset") layer(reset);
+@import url("noicss/colors") layer(colors);
+
+/* YOUR OWN CSS: */
+@layer main {
+
+}
+```
+
+or when you installed the modules individually:
 
 ```CSS
 @layer reset, colors, main;

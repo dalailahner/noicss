@@ -9,7 +9,7 @@
   initial-value: 1;
 }
 @property --noicssHue {
-  syntax: "<hue>";
+  syntax: "<number>";
   inherits: false;
   initial-value: 0;
 }

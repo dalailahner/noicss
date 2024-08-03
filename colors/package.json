@@ -1,7 +1,7 @@
 {
   "name": "noicss.colors",
   "description": "Color palette as custom CSS properties by noicss, that you can edit with just 1 (or more) inputs. In modern vanilla CSS.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "dalailahner",
   "license": "GLWTS",
   "repository": "github:dalailahner/noicss",

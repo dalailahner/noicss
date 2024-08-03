@@ -46,7 +46,7 @@ all values are optional, so you can set only the hue or all of them
 /* YOUR OWN CSS: */
 @layer main {
   :root {
-    --noicssHue: 0; /* <hue> from 0 - 360 | starting with 0 at red | default: 0 */
+    --noicssHue: 0; /* <number> from 0 - 360 | starting with 0 at red | default: 0 */
     --noicssSaturation: 1; /* <number> from 0 - 1 | deault: 1 */
     --noicssBrightness: 65%; /* <percentage> from 0% - 100% | default: 65% */
 

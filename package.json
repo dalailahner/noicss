@@ -1,10 +1,13 @@
 {
   "name": "noicss",
   "description": "A modular CSS collection to set you up with all kinds of things you might need. In modern vanilla CSS.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "dalailahner",
   "license": "GLWTS",
-  "repository": "github:dalailahner/noicss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalailahner/noicss.git"
+  },
   "exports": {
     "./reset": "./reset/reset.css",
     "./colors": "./colors/colors.css"

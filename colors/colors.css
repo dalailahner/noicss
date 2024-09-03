@@ -1,26 +1,26 @@
 @property --noicssBrightness {
   syntax: "<percentage>";
-  inherits: false;
+  inherits: true;
   initial-value: 65%;
 }
 @property --noicssSaturation {
   syntax: "<number>";
-  inherits: false;
+  inherits: true;
   initial-value: 1;
 }
 @property --noicssHue {
   syntax: "<number>";
-  inherits: false;
+  inherits: true;
   initial-value: 0;
 }
 @property --noicssBrightnessSpread {
   syntax: "<percentage>";
-  inherits: false;
+  inherits: true;
   initial-value: 0%;
 }
 @property --noicssSaturationSpread {
   syntax: "<number>";
-  inherits: false;
+  inherits: true;
   initial-value: 0;
 }
 

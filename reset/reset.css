@@ -1,6 +1,6 @@
 @property --accentColor {
   syntax: "<color>";
-  inherits: false;
+  inherits: true;
   initial-value: red;
 }
 

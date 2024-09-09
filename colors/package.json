@@ -10,6 +10,7 @@
     "directory": "colors/"
   },
   "main": "colors.css",
+  "packageManager": "pnpm@9.9.0",
   "scripts": {
     "test": "echo \"it's just CSS, you'll be fine\" && exit 0"
   },

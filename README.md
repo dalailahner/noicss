@@ -12,6 +12,7 @@
 
 - [reset](https://github.com/dalailahner/noicss/tree/master/reset)
 - [colors](https://github.com/dalailahner/noicss/tree/master/colors)
+- [toggle](https://github.com/dalailahner/noicss/tree/master/toggle)
 - more to come...
 
 ## Installation:
@@ -25,7 +26,7 @@ npm install noicss
 or you can pick individual modules depending on your needs:
 
 ```Shell
-npm install noicss.reset
+npm install noicss.reset noicss.colors noicss.toggle
 ```
 
 ## Usage:
@@ -33,10 +34,11 @@ npm install noicss.reset
 import the things you need into your CSS file:
 
 ```CSS
-@layer reset, colors, main;
+@layer reset, colors, toggle, main;
 
 @import url("noicss/reset") layer(reset);
 @import url("noicss/colors") layer(colors);
+@import url("noicss/toggle") layer(colors);
 
 /* YOUR OWN CSS: */
 @layer main {
@@ -47,10 +49,11 @@ import the things you need into your CSS file:
 or when you installed the modules individually:
 
 ```CSS
-@layer reset, colors, main;
+@layer reset, colors, toggle, main;
 
 @import url("noicss.reset") layer(reset);
 @import url("noicss.colors") layer(colors);
+@import url("noicss.toggle") layer(colors);
 
 /* YOUR OWN CSS: */
 @layer main {

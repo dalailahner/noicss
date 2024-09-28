@@ -1,0 +1,106 @@
+@property --noicssToggleWidth {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 64px;
+}
+@property --noicssToggleHeight {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 32px;
+}
+@property --noicssToggleRed {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: oklch(58% 0.22 27);
+}
+@property --noicssToggleGreen {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: oklch(70% 0.2 135);
+}
+@property --noicssToggleBorder {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: oklch(95% 0 0);
+}
+@property --noicssToggleButton {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: oklch(95% 0 0);
+}
+@property --noicssToggleButtonBorder {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: oklch(80% 0 0);
+}
+@property --noicssToggleOutline {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: currentcolor;
+}
+
+:root {
+  --infinite: calc(infinity * 1px);
+}
+
+.noicssToggle {
+  box-sizing: content-box;
+  container: toggleCont / size;
+  width: var(--noicssToggleWidth);
+  height: var(--noicssToggleHeight);
+  position: relative;
+  border: 2px solid var(--noicssToggleBorder);
+  border-radius: var(--infinite);
+  background-color: var(--noicssToggleBorder);
+  transition: all 0.1s ease-out;
+
+  &:has(input[type="checkbox"]:focus-visible) {
+    outline: medium solid var(--noicssToggleOutline);
+    outline-offset: 4px;
+  }
+
+  &::before {
+    content: "";
+    width: 100cqw;
+    height: 100cqh;
+    display: block;
+    position: absolute;
+    border-radius: var(--infinite);
+    background: linear-gradient(to right, var(--noicssToggleRed) 0% 50%, var(--noicssToggleGreen) 50% 100%);
+    background-size: 200% 100%;
+    background-position-x: 50cqh;
+    transition: inherit;
+  }
+
+  &::after {
+    content: "";
+    height: 100cqh;
+    aspect-ratio: 1;
+    display: block;
+    position: absolute;
+    background-color: var(--noicssToggleButton);
+    border: 2px solid var(--noicssToggleButtonBorder);
+    border-radius: var(--infinite);
+    transform: translateX(0);
+    transition: inherit;
+    pointer-events: none;
+  }
+
+  & input[type="checkbox"] {
+    position: absolute;
+    width: 100cqw;
+    height: 100cqh;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &:has(input[type="checkbox"]:checked) {
+    &::before {
+      background-position-x: calc(-100% - 50cqh);
+    }
+
+    &::after {
+      transform: translateX(calc(100cqw - 100%));
+    }
+  }
+}

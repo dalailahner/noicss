@@ -47,7 +47,7 @@ all values are optional, so you can set only the hue or all of them
 @layer main {
   :root {
     --noicssHue: 0; /* <number> from 0 - 360 | starting with 0 at red | default: 0 */
-    --noicssSaturation: 1; /* <number> from 0 - 1 | deault: 1 */
+    --noicssSaturation: 1; /* <number> from 0 - 1 | default: 1 */
     --noicssBrightness: 65%; /* <percentage> from 0% - 100% | default: 65% */
 
     /* brightness change from one color to another: */

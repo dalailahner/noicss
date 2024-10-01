@@ -40,6 +40,8 @@
 }
 
 :root {
+  --noicssToggleWidth: 4rem;
+  --noicssToggleHeight: 2rem;
   --infinite: calc(infinity * 1px);
 }
 

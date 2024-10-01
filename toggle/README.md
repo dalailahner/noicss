@@ -23,9 +23,9 @@ import it into your CSS file:
 /* YOUR OWN CSS: */
 @layer main {
   :root {
-    /* CUSTOMIZATION: */
-    --noicssToggleWidth: 64px;
-    --noicssToggleHeight: 32px;
+    /* CUSTOMIZATION (the following values are the defaults): */
+    --noicssToggleWidth: 4rem;
+    --noicssToggleHeight: 2rem;
 
     --noicssToggleRed: oklch(58% 0.22 27);
     --noicssToggleGreen: oklch(70% 0.2 135);

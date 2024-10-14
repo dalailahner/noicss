@@ -99,6 +99,16 @@ textarea {
   min-width: 0;
   caret-color: var(--accentColor);
 }
+[type="text"],
+[type="search"],
+textarea {
+  &::spelling-error {
+    text-decoration: from-font red wavy underline;
+  }
+  &::grammar-error {
+    text-decoration: from-font blue wavy underline;
+  }
+}
 button,
 select {
   text-transform: none;

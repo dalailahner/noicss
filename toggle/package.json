@@ -1,7 +1,7 @@
 {
   "name": "noicss.toggle",
   "description": "Customizable & accessible toggle switch by noicss. In modern vanilla CSS.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "dalailahner",
   "license": "GLWTS",
   "repository": {
@@ -10,7 +10,7 @@
     "directory": "toggle/"
   },
   "main": "toggle.css",
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.12.2",
   "scripts": {
     "test": "echo \"it's just CSS, you'll be fine\" && exit 0"
   },

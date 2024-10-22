@@ -1,7 +1,7 @@
 {
   "name": "noicss",
   "description": "A modular CSS collection to set you up with all kinds of things you might need. In modern vanilla CSS.",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "author": "dalailahner",
   "license": "GLWTS",
   "repository": {
@@ -12,7 +12,7 @@
     "./reset": "./reset/reset.css",
     "./colors": "./colors/colors.css"
   },
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.12.2",
   "scripts": {
     "test": "echo \"it's just CSS, you'll be fine\" && exit 0"
   },

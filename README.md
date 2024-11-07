@@ -38,7 +38,7 @@ import the things you need into your CSS file:
 
 @import url("noicss/reset") layer(reset);
 @import url("noicss/colors") layer(colors);
-@import url("noicss/toggle") layer(colors);
+@import url("noicss/toggle") layer(toggle);
 
 /* YOUR OWN CSS: */
 @layer main {
@@ -53,7 +53,7 @@ or when you installed the modules individually:
 
 @import url("noicss.reset") layer(reset);
 @import url("noicss.colors") layer(colors);
-@import url("noicss.toggle") layer(colors);
+@import url("noicss.toggle") layer(toggle);
 
 /* YOUR OWN CSS: */
 @layer main {

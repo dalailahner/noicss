@@ -41,6 +41,7 @@
 }
 html {
   scroll-behavior: smooth;
+  color-scheme: light dark;
   accent-color: var(--accentColor);
   font-size: 100%;
   line-height: 1.5;

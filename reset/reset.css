@@ -3,7 +3,11 @@
   inherits: true;
   initial-value: magenta;
 }
-
+@supports (view-transition-name: custom-ident) {
+  @view-transition {
+    navigation: auto;
+  }
+}
 *,
 *::before,
 *::after {

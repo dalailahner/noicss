@@ -10,7 +10,8 @@
   },
   "exports": {
     "./reset": "./reset/reset.css",
-    "./colors": "./colors/colors.css"
+    "./colors": "./colors/colors.css",
+    "./toggle": "./toggle/toggle.css"
   },
   "packageManager": "pnpm@9.12.2",
   "scripts": {

@@ -13,6 +13,7 @@
 - [reset](https://github.com/dalailahner/noicss/tree/master/reset)
 - [colors](https://github.com/dalailahner/noicss/tree/master/colors)
 - [toggle](https://github.com/dalailahner/noicss/tree/master/toggle)
+- [reducedmotion](https://github.com/dalailahner/noicss/tree/master/reducedmotion)
 - more to come...
 
 ## Installation:
@@ -26,7 +27,7 @@ npm install noicss
 or you can pick individual modules depending on your needs:
 
 ```Shell
-npm install noicss.reset noicss.colors noicss.toggle
+npm install noicss.reset noicss.colors noicss.toggle noicss.reducedmotion
 ```
 
 ## Usage:
@@ -34,11 +35,12 @@ npm install noicss.reset noicss.colors noicss.toggle
 import the things you need into your CSS file:
 
 ```CSS
-@layer reset, colors, toggle, main;
+@layer reset, colors, toggle, main, reducedmotion;
 
 @import url("noicss/reset") layer(reset);
 @import url("noicss/colors") layer(colors);
 @import url("noicss/toggle") layer(toggle);
+@import url("noicss/reducedmotion") layer(reducedmotion);
 
 /* YOUR OWN CSS: */
 @layer main {
@@ -49,11 +51,12 @@ import the things you need into your CSS file:
 or when you installed the modules individually:
 
 ```CSS
-@layer reset, colors, toggle, main;
+@layer reset, colors, toggle, main, reducedmotion;
 
 @import url("noicss.reset") layer(reset);
 @import url("noicss.colors") layer(colors);
 @import url("noicss.toggle") layer(toggle);
+@import url("noicss.reducedmotion") layer(reducedmotion);
 
 /* YOUR OWN CSS: */
 @layer main {

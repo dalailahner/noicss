@@ -1,7 +1,7 @@
 {
   "name": "noicss",
   "description": "A modular CSS collection to set you up with all kinds of things you might need. In modern vanilla CSS.",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "author": "dalailahner",
   "license": "GLWTS",
   "repository": {
@@ -11,7 +11,8 @@
   "exports": {
     "./reset": "./reset/reset.css",
     "./colors": "./colors/colors.css",
-    "./toggle": "./toggle/toggle.css"
+    "./toggle": "./toggle/toggle.css",
+    "./reducedmotion": "./reducedmotion/reducedmotion.css"
   },
   "packageManager": "pnpm@9.15.0",
   "scripts": {

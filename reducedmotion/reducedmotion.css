@@ -1,0 +1,29 @@
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after,
+  *::backdrop,
+  *::marker,
+  *::placeholder,
+  *::selection,
+  *:hover,
+  *:focus,
+  *:focus-visible,
+  *:focus-within,
+  *:active,
+  *:checked,
+  *:invalid,
+  *:disabled {
+    transition-delay: 0.01ms;
+    transition-duration: 0.01ms;
+    animation-delay: 0.01ms;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+  @view-transition {
+    navigation: none;
+  }
+}

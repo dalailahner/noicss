@@ -59,8 +59,12 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+span {
   overflow-wrap: break-word;
+  @supports (text-box: trim-both cap alphabetic) {
+    text-box: trim-both cap alphabetic;
+  }
 }
 hr {
   height: 0;
@@ -100,15 +104,22 @@ table {
   text-indent: 0;
   border-color: inherit;
 }
+[type="button"],
+[type="reset"],
+[type="submit"],
 button,
 input,
-optgroup,
+textarea,
 select,
-textarea {
+optgroup,
+option {
   margin: 0;
   font: inherit;
   letter-spacing: inherit;
   word-spacing: inherit;
+  @supports (text-box: trim-both cap alphabetic) {
+    text-box: trim-both cap alphabetic;
+  }
 }
 input,
 textarea {

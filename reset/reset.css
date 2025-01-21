@@ -148,6 +148,9 @@ select {
 [type="submit"],
 button {
   -webkit-appearance: button;
+  @supports (text-box: trim-both cap alphabetic) {
+    text-box: trim-both cap alphabetic;
+  }
 }
 ::-moz-focus-inner {
   border-style: none;

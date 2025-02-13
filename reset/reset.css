@@ -117,9 +117,6 @@ option {
   font: inherit;
   letter-spacing: inherit;
   word-spacing: inherit;
-  @supports (text-box: trim-both cap alphabetic) {
-    text-box: trim-both cap alphabetic;
-  }
   @supports (field-sizing: content) {
     field-sizing: content;
   }

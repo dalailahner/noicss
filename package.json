@@ -14,7 +14,7 @@
     "./toggle": "./toggle/toggle.css",
     "./reducedmotion": "./reducedmotion/reducedmotion.css"
   },
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@10.3.0",
   "scripts": {
     "test": "echo \"it's just CSS, you'll be fine\" && exit 0"
   },

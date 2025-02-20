@@ -15,6 +15,7 @@
   *:focus-within,
   *:active,
   *:checked,
+  *:valid,
   *:invalid,
   *:disabled {
     transition-delay: 0.01ms;

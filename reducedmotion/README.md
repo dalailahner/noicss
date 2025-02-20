@@ -1,14 +1,14 @@
 <h1 align="center">
-  noicss.reset
+  noicss.reducedmotion
 </h1>
 <p align="center">
-  A modern reset / normalize by noicss.
+  Accessibility module for reduced motion by noicss. In modern vanilla CSS.
 </p>
 
 ## Installation:
 
 ```Shell
-npm install noicss.reset
+npm install noicss.reducedmotion
 ```
 
 ## Usage:
@@ -16,9 +16,9 @@ npm install noicss.reset
 import it into your CSS file:
 
 ```CSS
-@layer reset, main;
+@layer main, reducedmotion;
 
-@import url("noicss.reset") layer(reset);
+@import url("noicss.reducedmotion") layer(reducedmotion);
 
 /* YOUR OWN CSS: */
 @layer main {

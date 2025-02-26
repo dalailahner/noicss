@@ -128,12 +128,17 @@ textarea {
 }
 [type="text"],
 [type="search"],
-textarea {
-  &::spelling-error {
-    text-decoration: from-font red wavy underline;
+textarea,
+*[contenteditable] {
+  @supports selector(*::spelling-error) {
+    &::spelling-error {
+      text-decoration: from-font red wavy underline;
+    }
   }
-  &::grammar-error {
-    text-decoration: from-font blue wavy underline;
+  @supports selector(*::grammar-error) {
+    &::grammar-error {
+      text-decoration: from-font blue wavy underline;
+    }
   }
 }
 button,

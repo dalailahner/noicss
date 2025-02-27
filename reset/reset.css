@@ -3,6 +3,31 @@
   inherits: true;
   initial-value: magenta;
 }
+@property --outlineColor {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: magenta;
+}
+@property --caretColor {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: magenta;
+}
+@property --highlightedTextColor {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: currentcolor;
+}
+@property --highlightedTextBgColor {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: magenta;
+}
+:root {
+  --highlightedTextBgColor: var(--accentColor);
+  --outlineColor: var(--accentColor);
+  --caretColor: var(--accentColor);
+}
 @supports (view-transition-name: custom-ident) {
   @view-transition {
     navigation: auto;
@@ -26,17 +51,18 @@
   }
 
   &:focus-visible {
-    outline: 2px solid var(--accentColor);
+    outline: 2px solid var(--outlineColor);
     outline-offset: 2px;
   }
 
   &::selection,
   &::target-text {
-    background-color: var(--accentColor);
+    color: var(--highlightedTextColor);
+    background-color: var(--highlightedTextBgColor);
   }
 
   &[contenteditable] {
-    caret-color: var(--accentColor);
+    caret-color: var(--caretColor);
   }
 }
 html {
@@ -124,7 +150,7 @@ option {
 input,
 textarea {
   min-width: 0;
-  caret-color: var(--accentColor);
+  caret-color: var(--caretColor);
 }
 [type="text"],
 [type="search"],

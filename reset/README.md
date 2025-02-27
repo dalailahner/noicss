@@ -22,7 +22,17 @@ import it into your CSS file:
 
 /* YOUR OWN CSS: */
 @layer main {
+  :root {
+    /* CUSTOMIZATION (the following values are the defaults): */
+    --accentColor: magenta;
 
+    --outlineColor: var(--accentColor);
+
+    --caretColor: var(--accentColor);
+
+    --highlightedTextColor: currentcolor;
+    --highlightedTextBgColor: var(--accentColor);
+  }
 }
 ```
 

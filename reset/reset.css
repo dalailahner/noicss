@@ -1,38 +1,48 @@
+/* stylelint-disable color-named */
+/* stylelint-disable property-no-vendor-prefix */
+
 @property --accentColor {
   syntax: "<color>";
   inherits: true;
   initial-value: magenta;
 }
+
 @property --outlineColor {
   syntax: "<color>";
   inherits: true;
   initial-value: magenta;
 }
+
 @property --caretColor {
   syntax: "<color>";
   inherits: true;
   initial-value: magenta;
 }
+
 @property --highlightedTextColor {
   syntax: "<color>";
   inherits: true;
   initial-value: currentcolor;
 }
+
 @property --highlightedTextBgColor {
   syntax: "<color>";
   inherits: true;
   initial-value: magenta;
 }
+
 :root {
   --highlightedTextBgColor: var(--accentColor);
   --outlineColor: var(--accentColor);
   --caretColor: var(--accentColor);
 }
+
 @supports (view-transition-name: custom-ident) {
   @view-transition {
     navigation: auto;
   }
 }
+
 *,
 *::before,
 *::after {
@@ -50,6 +60,7 @@
     interpolate-size: allow-keywords;
   }
 }
+
 * {
   &:focus-visible {
     outline: 2px solid var(--outlineColor);
@@ -67,14 +78,14 @@
   }
 }
 html {
-  scroll-behavior: smooth;
   color-scheme: light dark;
-  accent-color: var(--accentColor);
   font-size: 100%;
   line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   tab-size: 4;
+  accent-color: var(--accentColor);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }
 body {
@@ -116,10 +127,10 @@ small {
 }
 sub,
 sup {
+  vertical-align: baseline;
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
-  vertical-align: baseline;
 }
 sub {
   bottom: -0.25em;
@@ -182,8 +193,8 @@ button {
   }
 }
 ::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+  border-style: none;
 }
 :-moz-focusring {
   outline: 1px dotted ButtonText;
@@ -214,6 +225,9 @@ progress {
 }
 summary {
   display: list-item;
+}
+[popover] {
+  inset: auto;
 }
 dialog {
   max-width: 100%;

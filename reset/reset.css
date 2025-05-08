@@ -100,9 +100,6 @@ h6,
 p,
 span {
   overflow-wrap: break-word;
-  @supports (text-box: trim-both cap alphabetic) {
-    text-box: trim-both cap alphabetic;
-  }
 }
 hr {
   height: 0;

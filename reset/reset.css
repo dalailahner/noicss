@@ -44,8 +44,30 @@
 }
 
 *,
-*::before,
-*::after {
+::after,
+::backdrop,
+::before,
+::checkmark,
+/* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+::column,
+::cue,
+::cue(*),
+::details-content,
+::file-selector-button,
+::first-letter,
+::picker(select),
+::picker-icon,
+::placeholder,
+/* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+::scroll-button(*),
+::scroll-marker,
+::scroll-marker-group,
+::slotted(*),
+::view-transition,
+::view-transition-group(*),
+::view-transition-image-pair(*),
+::view-transition-new(*),
+::view-transition-old(*) {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

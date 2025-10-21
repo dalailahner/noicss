@@ -108,9 +108,12 @@ html {
   -moz-tab-size: 2;
   tab-size: 2;
   accent-color: var(--accentColor);
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 hr {
   height: 0;

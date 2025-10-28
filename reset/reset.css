@@ -90,8 +90,7 @@
   }
 
   &::selection,
-  &::target-text,
-  &:target {
+  &::target-text {
     color: var(--highlightedTextColor);
     background-color: var(--highlightedTextBgColor);
     scroll-margin: 1.5rlh;

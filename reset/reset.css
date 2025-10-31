@@ -165,7 +165,7 @@ table {
 }
 [type="button"],
 [type="reset"],
-[type="submit"],
+[type="submit"] [type="file"]::file-selector-button,
 button,
 input,
 textarea,
@@ -207,9 +207,11 @@ select {
 [type="button"],
 [type="reset"],
 [type="submit"],
+[type="file"]::-webkit-file-upload-button,
 button {
   -webkit-appearance: button;
   color: Canvas;
+  font: inherit;
   border: 1px solid transparent; /* windows high contrast accessibility thing */
   background: CanvasText;
   @supports (text-box: trim-both cap alphabetic) {
@@ -246,10 +248,6 @@ progress {
 }
 ::-webkit-search-decoration {
   -webkit-appearance: none;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
 }
 summary {
   display: list-item;

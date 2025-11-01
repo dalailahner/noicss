@@ -165,7 +165,8 @@ table {
 }
 [type="button"],
 [type="reset"],
-[type="submit"] [type="file"]::file-selector-button,
+[type="submit"],
+[type="file"]::file-selector-button,
 button,
 input,
 textarea,
@@ -211,7 +212,6 @@ select {
 button {
   -webkit-appearance: button;
   color: Canvas;
-  font: inherit;
   border: 1px solid transparent; /* windows high contrast accessibility thing */
   background: CanvasText;
   @supports (text-box: trim-both cap alphabetic) {

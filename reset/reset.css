@@ -113,6 +113,11 @@ html {
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
   }
+
+  /* for google translate: */
+  &.translated-rtl {
+    direction: rtl;
+  }
 }
 hr {
   height: 0;

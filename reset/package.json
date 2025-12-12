@@ -1,7 +1,7 @@
 {
   "name": "noicss.reset",
   "description": "reset / normalize by noicss. In modern vanilla CSS.",
-  "version": "1.13.1",
+  "version": "1.14.0",
   "author": "dalailahner",
   "license": "GLWTS",
   "repository": {

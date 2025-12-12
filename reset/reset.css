@@ -116,6 +116,11 @@ html {
     scroll-behavior: smooth;
   }
 
+  &:has(dialog[open]:modal) {
+    overflow: hidden;
+    scrollbar-gutter: stable;
+  }
+
   /* for google translate: */
   &.translated-rtl {
     direction: rtl;

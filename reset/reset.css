@@ -48,8 +48,6 @@
 ::backdrop,
 ::before,
 ::checkmark,
-/* stylelint-disable-next-line selector-pseudo-element-no-unknown */
-::column,
 ::cue,
 ::cue(*),
 ::details-content,
@@ -58,10 +56,6 @@
 ::picker(select),
 ::picker-icon,
 ::placeholder,
-/* stylelint-disable-next-line selector-pseudo-element-no-unknown */
-::scroll-button(*),
-::scroll-marker,
-::scroll-marker-group,
 ::slotted(*),
 ::view-transition,
 ::view-transition-group(*),

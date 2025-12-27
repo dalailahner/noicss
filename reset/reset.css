@@ -45,23 +45,10 @@
 
 *,
 ::after,
-::backdrop,
 ::before,
-::checkmark,
-::cue,
-::cue(*),
 ::details-content,
 ::file-selector-button,
-::first-letter,
-::picker(select),
-::picker-icon,
-::placeholder,
-::slotted(*),
-::view-transition,
-::view-transition-group(*),
-::view-transition-image-pair(*),
-::view-transition-new(*),
-::view-transition-old(*) {
+::placeholder {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

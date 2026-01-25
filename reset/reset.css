@@ -247,6 +247,13 @@ summary {
 }
 [popover] {
   inset: auto;
+  @supports (position-area: top) {
+    position-area: top;
+    position-try-fallbacks:
+      flip-block,
+      flip-start,
+      flip-start flip-inline;
+  }
 }
 dialog {
   max-width: 100%;

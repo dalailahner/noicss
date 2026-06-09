@@ -33,6 +33,7 @@
 
 :root {
   --highlightedTextBgColor: var(--accentColor);
+  --highlightedTextColor: color-mix(in oklch, var(--highlightedTextBgColor) 25%, contrast-color(var(--highlightedTextBgColor)));
   --outlineColor: var(--accentColor);
   --caretColor: var(--accentColor);
 }
@@ -71,17 +72,22 @@
     outline: 2px solid var(--outlineColor);
     outline-offset: 2px;
   }
-
-  &::selection,
-  &::target-text {
-    color: var(--highlightedTextColor);
-    background-color: var(--highlightedTextBgColor);
-    scroll-margin: 1.5rlh;
-  }
-
-  &[contenteditable] {
-    caret-color: var(--caretColor);
-  }
+}
+::selection,
+::target-text {
+  color: var(--highlightedTextColor);
+  background-color: var(--highlightedTextBgColor);
+  scroll-margin: 1.5rlh;
+}
+::search-text {
+  color: var(--highlightedTextBgColor);
+  text-decoration-color: var(--highlightedTextBgColor);
+  background-color: var(--highlightedTextColor);
+}
+::search-text:current {
+  color: var(--highlightedTextColor);
+  text-decoration-color: var(--highlightedTextColor);
+  background-color: var(--highlightedTextBgColor);
 }
 html {
   color-scheme: light dark;

@@ -175,14 +175,15 @@ option {
   }
 }
 input,
-textarea {
+textarea,
+[contenteditable] {
   min-width: 0;
   caret-color: var(--caretColor);
 }
 [type="text"],
 [type="search"],
 textarea,
-*[contenteditable] {
+[contenteditable] {
   @supports selector(*::spelling-error) {
     &::spelling-error {
       text-decoration: from-font red wavy underline;

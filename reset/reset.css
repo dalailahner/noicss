@@ -55,14 +55,6 @@
   padding: 0;
   overflow-wrap: break-word;
   border: none;
-  @supports (transition-behavior: allow-discrete) {
-    /* used to transition from display: none; to display: block; */
-    transition-behavior: allow-discrete;
-  }
-  @supports (interpolate-size: allow-keywords) {
-    /* used to transition from height: 0; to height: auto; without using the calc-size() function */
-    interpolate-size: allow-keywords;
-  }
 }
 
 * {
@@ -98,6 +90,14 @@ html {
   accent-color: var(--accentColor);
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  @supports (transition-behavior: allow-discrete) {
+    /* used to transition from display: none; to display: block; */
+    transition-behavior: allow-discrete;
+  }
+  @supports (interpolate-size: allow-keywords) {
+    /* used to transition from height: 0; to height: auto; without using the calc-size() function */
+    interpolate-size: allow-keywords;
+  }
 
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;

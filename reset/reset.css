@@ -55,6 +55,11 @@
   padding: 0;
   overflow-wrap: break-word;
   border: none;
+  @supports (transition-behavior: allow-discrete) {
+    /* used to transition from display: none; to display: block; */
+    /* !important so the "transition" shorthand doesn't override it */
+    transition-behavior: allow-discrete !important;
+  }
 }
 
 * {
@@ -71,16 +76,19 @@
   background-color: var(--highlightedTextBgColor);
   scroll-margin: 1.5rlh;
 }
-::search-text {
-  color: var(--highlightedTextBgColor);
-  text-decoration-color: var(--highlightedTextBgColor);
-  background-color: var(--highlightedTextColor);
-}
-::search-text:current {
-  color: var(--highlightedTextColor);
-  text-decoration-color: var(--highlightedTextColor);
-  background-color: var(--highlightedTextBgColor);
-}
+/* uncomment if the issue is resolved (https://github.com/parcel-bundler/lightningcss/issues/1303) */
+/* @supports selector(::search-text:current) {
+  ::search-text {
+    color: var(--highlightedTextBgColor);
+    text-decoration-color: var(--highlightedTextBgColor);
+    background-color: var(--highlightedTextColor);
+  }
+  ::search-text:current {
+    color: var(--highlightedTextColor);
+    text-decoration-color: var(--highlightedTextColor);
+    background-color: var(--highlightedTextBgColor);
+  }
+} */
 html {
   color-scheme: light dark;
   font-size: 100%;
@@ -90,10 +98,6 @@ html {
   accent-color: var(--accentColor);
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  @supports (transition-behavior: allow-discrete) {
-    /* used to transition from display: none; to display: block; */
-    transition-behavior: allow-discrete;
-  }
   @supports (interpolate-size: allow-keywords) {
     /* used to transition from height: 0; to height: auto; without using the calc-size() function */
     interpolate-size: allow-keywords;
@@ -105,7 +109,6 @@ html {
 
   &:has(dialog[open]:modal) {
     overflow: hidden;
-    scrollbar-gutter: stable;
   }
 
   /* for google translate: */

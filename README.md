@@ -35,6 +35,9 @@ npm install noicss.reset noicss.colors noicss.toggle noicss.reducedmotion
 import the things you need into your CSS file:
 
 ```CSS
+/* install the full collection, ready to use whatever you need: */
+/* npm i noicss */
+
 @layer reset, colors, toggle, main, reducedmotion;
 
 @import url("noicss/reset") layer(reset);
@@ -48,9 +51,14 @@ import the things you need into your CSS file:
 }
 ```
 
-or when you installed the modules individually:
+### or
+
+when you installed the modules individually:
 
 ```CSS
+/* install the individual modules separately: */
+/* npm i noicss.reset noicss.colors noicss.toggle noicss.reducedmotion */
+
 @layer reset, colors, toggle, main, reducedmotion;
 
 @import url("noicss.reset") layer(reset);

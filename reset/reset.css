@@ -47,9 +47,9 @@
 *,
 ::after,
 ::before,
-::details-content,
-::file-selector-button,
-::placeholder {
+details::details-content,
+input::file-selector-button,
+input::placeholder {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -70,12 +70,7 @@
     outline-offset: 2px;
   }
 }
-::selection,
-::target-text {
-  color: var(--highlightedTextColor);
-  background-color: var(--highlightedTextBgColor);
-  scroll-margin: 1.5rlh;
-}
+
 /* uncomment if the issue is resolved (https://github.com/parcel-bundler/lightningcss/issues/1303) */
 /* @supports selector(::search-text:current) {
   ::search-text {
@@ -105,6 +100,13 @@ html {
 
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
+  }
+
+  &::selection,
+  &::target-text {
+    color: var(--highlightedTextColor);
+    background-color: var(--highlightedTextBgColor);
+    scroll-margin: 1.5rlh;
   }
 
   &:has(dialog[open]:modal) {
